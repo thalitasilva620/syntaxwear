@@ -1,0 +1,195 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--header-h);
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    transition: background var(--transition), border-color var(--transition), backdrop-filter var(--transition);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-mark {
+    width: 32px;
+    background: var(--clr-accent);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--clr-accent);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.nav-link {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+    text-decoration: none;
+    transition: color var(--transition);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--clr-accent);
+    border-radius: 99px;
+    transition: width var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+    color: var(--clr-text);
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.header-icon-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--clr-text-muted);
+    transition: var(--transition);
+}
+
+.header-icon-btn:hover {
+    background: var(--clr-surface-2);
+    color: var(--clr-text);
+    border: 1px solid var(--clr-accent);
+}
+
+.header-icon-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 1rem;
+    height: 1rem;
+    background: var(--clr-accent);
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--clr-bg);
+}
+
+.footer {
+    background: var(--clr-accent);
+    border-top: 1px solid var(--clr-border);
+    padding-block: var(--space-2xl) var(--space-xl);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.8fr repeat(3, 1fr);
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid var(--clr-border);
+    margin-bottom: var(--space-xl);
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    margin-top: var(--space-md);
+    max-width: 30ch;
+    color: var(--clr-text);
+}
+
+.footer-col h4 {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-text);
+    margin-bottom: var(--space-md);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+}
+
+.footer-copy p {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--clr-text-faint);
+    max-width: none;
+}
+
+.product-card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition-slow);
+    position: relative;
+}
+
+.product-card:hover {
+    border-color: rgba(255, 92, 0, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.product-card-image {
+    position: relative;
+    background-color: var(--clr-surface-2);
+    overflow: hidden;
+}
+
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--transition-slow);
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.06);
+}
+
