@@ -1,16 +1,19 @@
 :root {
     /* Cores principais */
+    
     --clr-bg: #0a0a0a;
     --clr-surface: #111111;
     --clr-surface-2: #1a1a1a;
     --clr-border: #2a2a2a;
 
     /* Accent — laranja elétrico */
+    
     --clr-accent: #ff5c00;
     --clr-accent-2: #ff8c42;
     --clr-accent-glow: rgba(255, 92, 0, 0.18);
 
     /* Texto */
+    
     --clr-text: #f0ece6;
     --clr-text-muted: #888888;
     --clr-text-faint: #444444;
@@ -23,6 +26,7 @@
     --font-body: 'DM Sans', sans-serif;
 
     /* Espaçamento */
+    
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -32,10 +36,12 @@
     --space-3xl: 5rem;
 
     /* Layout */
+    
     --max-width: 1200px;
     --header-h: 72px;
 
     /* Bordas e sombras */
+    
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -46,6 +52,7 @@
     --shadow-accent: 0 0 24px rgba(255,92,0,0.25);
 
     /* Transições */
+    
     --transition: 0.25s ease;
     --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -98,6 +105,7 @@ button {
 }
 
 /* -----------Tipografia ----------- */
+
 h1, h2, h3, h4 {
     font-family: var(--font-display);
     line-height: 1.15;
@@ -127,6 +135,7 @@ p {
 }
 
 /* ----------- Layout ----------- */
+
 .container {
     width: 100%;
     max-width: var(--max-width);
@@ -154,6 +163,7 @@ p {
 }
 
 /* ----------- Botões -----------*/
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -201,6 +211,7 @@ p {
 }
 
 /* -------------- Cards ------------- */
+
 .card {
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
@@ -216,6 +227,7 @@ p {
 }
 
 /* ---------- Animações ---------- */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -236,6 +248,7 @@ p {
 }
 
 /* ---------- Responsividade base ---------- */
+
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }

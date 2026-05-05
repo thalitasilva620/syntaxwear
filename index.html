@@ -7,6 +7,10 @@
     <meta name="description"
         content="SyntaxWear - Moda e tecnologia no mesmo par. Os melhores tênis, sandálias e calçados com entrega rápida para todo Brasil." />
 
+    <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/pages/home.css">
+
     <title>SyntaxWear - Calçados com Atitude</title>
 </head>
 
@@ -17,10 +21,6 @@
                 <a href="/" title="SyntaxWear - Tênis e Sneakers Online">
                     <img src="./assets/imagens/logo/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online" class="logo" />
                 </a>
-
-                <button class="menu-icon" aria-label="Abrir menu de navegação" aria-expanded="false">
-                    <img src="./assets/imagens/icons/menu.svg" alt="" aria-hidden="true" />
-                </button>
 
                 <nav class="nav" aria-label="Navegação principal">
                     <a href="index.html" class="nav-link active">Home</a>
@@ -53,20 +53,23 @@
     <main>
         <section class="hero-section">
             <div class="hero-glow">
-                <div class="container">
+                <div class="hero-inner">
                     <div class="hero-content">
                         <div class="hero-tag">Nova Coleção</div>
 
-                        <h1>Calçados que elevam seu estilo</h1>
+                        <h1 class="hero-title">Calçados que elevam seu estilo</h1>
 
-                        <p class="hero-description">Do asfalto à passarela - o SyntaxWear traz os melhores tênis, sandálias e sapatos com tecnologia, conforto e atitude.</p>
+                        <p class="hero-description">Do asfalto à passarela - o SyntaxWear traz os melhores tênis,
+                            sandálias
+                            e sapatos com tecnologia, conforto e atitude.
+                        </p>
 
                         <div class="hero-actions">
                             <a href="pages/produtos.html" class="btn btn-primary">
-                                <img src="./assets/imagens/icons/arrow-up.svg" alt="" class="btn-icon" />
+                                <img src="./assets/imagens/icons/chevron-down.svg" alt="" />
                                 Explorar Coleção
                             </a>
-                            <a href="#categorias" class="btn btn-outline">
+                            <a href="#categories" class="btn btn-outline">
                                 Ver categorias
                             </a>
                         </div>
@@ -75,14 +78,16 @@
             </div>
         </section>
 
-        <section class="categories-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Categorias em destaque</h2>
-                    <span class="section-description">Explore nossas categorias mais populares e encontre o par perfeito para cada estilo e ocasião.</span>
+        <section class="category-section">
+            <div class="category-container">
+                <div class="category-header">
+                    <h2 class="categories-title">Categorias em destaque</h2>
+                    <span class="category-description">Explore nossas categorias mais populares e encontre o par
+                        perfeito
+                        para cada estilo e ocasião.</span>
                 </div>
 
-                <div class="categories-card-moderno" aria-label="Categorias de produtos" role="list">
+                <div class="category-card" aria-label="Categorias de produtos" role="list">
                     <a href="pages/produtos.html?categoria=tenis" class="category-link">
                         <span class="overlay"></span>
                         <span class="category-name btn btn-outline">Tênis</span>
@@ -108,22 +113,25 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="grid-section" aria-hidden="true">
             <div class="card top2"></div>
             <div class="card midL"></div>
             <div class="card midR"></div>
             <div class="card bottomL"></div>
-            <div class="card bottomR"></div>
         </section>
-        
-        <section class="section-promo">
+
+        <section class="section-promo" aria-labelledby="promo-title">
             <div class="container">
-                <div class="promo-banner">
-                    <span class="promo-tag">Oferta Exclusiva</span>
-                    <h2>Até 30% off<br>na coleção Trail</h2>
-                    <p>Projetados para o desempenho e conforto. Os melhores calçados esportivos com desconto especial por tempo limitado.</p>
-                    <a href="pages/produtos.html?categoria=trail" class="btn btn-primary">Aproveitar oferta</a>
+                <div class="promo-banner" data-animate>
+                    <div class="promo-banner-body">
+                        <span class="promo-banner-tag">Oferta Exclusiva</span>
+                        <h2 class="-banner-title" id="promo-title">Até 30% off<br> na coleção Trail</h2>
+                        <p class="promo-banner-description">Projetados para o desempenho e conforto. Os melhores
+                            calçados esportivos com desconto especial
+                            por tempo limitado.</p>
+                        <a href="pages/produtos.html?categoria=trail" class="btn btn-primary">Aproveitar oferta</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,24 +144,23 @@
                     <p>Cadastre-se e seja o primeiro a saber sobre lançamentos, promoções e novidades!</p>
 
                     <form class="newsletter-form" novalidate aria-label="Formulário de newsletter">
-                        <input type="email" placeholder="Digite seu e-mail" required id="newsletter-email"/>
+                        <input type="email" placeholder="Digite seu e-mail" required id="newsletter-email" />
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </form>
 
-                <div class="socials">
-                    <span>Redes sociais</span>
-                    <ul>
-                        <li>
-                            <a href="#"><img src="./assets/imagens/icons/instagram.svg" alt="Instagram" /></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./assets/imagens/icons/whatsapp.svg" alt="WhatsApp" /></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./assets/imagens/icons/tiktok.svg" alt="TikTok" /></a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="socials">
+                        <ul class="social-btn">
+                            <li class="icon">
+                                <a href="#"><img src="./assets/imagens/icons/instagram.svg" alt="Instagram" /></a>
+                            </li>
+                            <li class="icon">
+                                <a href="#"><img src="./assets/imagens/icons/whatsapp.svg" alt="WhatsApp" /></a>
+                            </li>
+                            <li class="icon">
+                                <a href="#"><img src="./assets/imagens/icons/tiktok.svg" alt="TikTok" /></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -164,7 +171,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" title="SyntaxWear - Tênis e Sneakers Online">
-                        <img src="./assets/imagens/logo/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online" class="logo-footer" />
+                        <img src="./assets/imagens/logo/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online"
+                            class="logo-footer" />
                     </a>
                     <p>Moda e tecnologia no mesmo par. Calçados com atitude para quem não fica parado.</p>
                 </div>
