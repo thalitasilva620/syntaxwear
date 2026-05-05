@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SyntaxWear - Explore todos os nossos calçados. Filtre por categoria, tamanho, gênero e preço.">
+
+    <title>Produtos - SyntaxWear</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" title="SyntaxWear - Tênis e Sneakers Online">
+                    <img src="../assets/imagens/logo/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online"
+                        class="logo" />
+                </a>
+
+                <nav class="nav" aria-label="Navegação principal">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="pages/produtos.html" class="nav-link">Produtos</a>
+                    <a href="#categorias" class="nav-link">Categorias</a>
+                    <a href="#newsletter" class="nav-link">Ofertas</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-icon-btn" aria-label="Buscar produtos" id="btn-search">
+                        <img src="./assets/imagens/icons/search.svg" alt="" />
+                    </button>
+
+                    <a href="#" class="header-icon-btn" aria-label="Lista de desejos">
+                        <img src="./assets/imagens/icons/heart.svg" alt="" />
+                    </a>
+
+                    <a href="pages/carrinho.html" class="header-icon-btn" aria-label="Carrinho de compras">
+                        <img src="./assets/imagens/icons/cart.svg" alt="" />
+                        <span class="cart-badge">0</span>
+                    </a>
+
+                    <a href="pages/login.html" class="btn btn-outline">Entrar</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="produtos-main">
+        <div class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="../index.html" class="breadcrumb-link">Home</a>
+                    </li>
+                    <li class="breadcrumb-item breadcrumb-item-active" aria-current="page">Produtos</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="produtos-layout">
+                <aside class="sidebar" aria-label="Filtros de produtos" id="sidebar">
+                    <div class="sidebar-header">
+                        <h2 class="sidebar-title">
+                            <img src="../assets/imagens/icons/filter.svg" alt="" aria-hidden="true" />
+                            Filtros
+                        </h2>
+                        <button class="sidebar-clear" id="btn-clear-filters" aria-label="Limpar todos os filtros">Limpar
+                            tudo</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-group-label" for="busca-input">
+                            Buscar
+                        </label>
+                        <div class="search-input-wrap">
+                            <img src="../assets/imagens/icons/search.svg" aria-hidden="true" />
+
+                            <input type="search" id="busca-input" placeholder="Nome, marca ou categoria..."
+                                autocomplete="off" aria-label="Buscar produtos" />
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <span class="filter-group-label">Categoria</span>
+                        <div class="filter-options" role="group" aria-label="Filtrar por categoria">
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="todos" checked />
+                                <span>Todos</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="Tênis" />
+                                <span>Tênis</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="Casual" />
+                                <span>Casual</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="Salto" />
+                                <span>Salto</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="Esportivo" />
+                                <span>Esportivo</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="Social" />
+                                <span>Social</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="categoria" value="Sandália" />
+                                <span>Sandália</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <span class="filter-group-label">Gênero</span>
+                        <div class="filter-options" role="group" aria-label="Filtrar por gênero">
+                            <label class="filter-chip">
+                                <input type="radio" name="genero" value="todos" checked />
+                                <span>Todos</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="genero" value="masculino" />
+                                <span>Masculino</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="genero" value="feminino" />
+                                <span>Feminino</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="radio" name="genero" value="unissex" />
+                                <span>Unissex</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <span class="filter-group-label">Tamanho</span>
+                        <div class="filter-sizes" role="group" aria-label="Filtrar por tamanho" id="filter-sizes">
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="35" /><span>35</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="36" /><span>36</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="37" /><span>37</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="38" /><span>38</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="39" /><span>39</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="40" /><span>40</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="41" /><span>41</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="42" /><span>42</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="43" /><span>43</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="44" /><span>44</span>
+                            </label>
+                            <label class="size-chip">
+                                <input type="checkbox" name="tamanho" value="45" /><span>45</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>
+                            Preço máximo:
+                            <strong>R$ 800</strong>
+                        </span>
+                        <input type="range" id="preco-range" class="range-input" min="100" max="800" step="50"
+                            value="800" aria-label="Preço máximo" />
+                        <div class="range-labels">
+                            <span>R$ 100</span>
+                            <span>R$ 800</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="filter-group-label">Destaques</span>
+                        <div>
+                            <label class="filter-chip">
+                                <input type="checkbox" name="tag" value="novo" />
+                                <span>🆕 Novo</span>
+                            </label>
+                            <label class="filter-chip">
+                                <input type="checkbox" name="tag" value="sale">
+                                <span>🔥 Promoção</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="tag" value="mais vendido" />
+                                <span>⭐ Mais vendido</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary sidebar-apply" id="btn-apply-filters">Ver resultados</button>
+                </aside>
+
+                <div class="produtos-content">
+                    <div class="produtos-toolbar">
+                        <div class="produtos-info">
+                            <span class="produtos-count" id="produtos-count" aria-live="polite">
+                                8 produtos encontrados
+                            </span>
+                        </div>
+
+                        <div class="produtos-controls">
+                            <div class="select-wrap">
+                                <select id="ordenar-select" class="select-input" aria-label="Ordenar produtos">
+                                    <option value="">Ordernar por</option>
+                                    <option value="menor-preco">Menor preço</option>
+                                    <option value="maior-preco">Maior preço</option>
+                                    <option value="avaliacao">Melhor avaliação</option>
+                                    <option value="desconto">Maior desconto</option>
+                                </select>
+
+                                <img src="../assets/imagens/icons/chevron-down.svg" alt="" aria-hidden="true">
+                            </div>
+
+                            <div class="view-toggle" role="group" aria-label="Modo de exibição">
+                                <button class="view-btn active" data-view="grid" aria-label="Visualização em grade"
+                                    aria-pressed="true">
+                                    <img src="../assets/imagens/icons/grid.svg" alt="" aria-hidden="true">
+                                </button>
+
+                                <button class="view-btn" data-view="list" aria-label="Visualização em lista"
+                                    aria-pressed="false">
+                                    <img src="../assets/imagens/icons/list.svg" alt="" aria-hidden="true">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="active-filters" id="active-filters" aria-label="Filtros ativos"></div>
+
+                    <div class="produtos-grid" id="produtos-grid" role="list" aria-label="Lista de produtos"
+                        aria-live="polite" aria-busy="false">
+                    </div>
+
+                    <div class="produtos-empty" id="produtos-empty" hidden>
+                        <div class="produtos-empty-icon">
+                            <img src="../assets/imagens/icons/search.svg" alt="" aria-hidden="true">
+                        </div>
+                        <h3>Nenhum produto encontrado</h3>
+                        <p>Tente ajustar os filtros ou buscar por outro termo.</p>
+                        <button class="btn btn-primary" id="btn-empty-clear">Limpar filtros</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/imagens/logo/logo.svg" alt="">
+                    </a>
+                    <p>Moda e tecnologia no mesmo par. Calçados com atitude para quem não fica parado.</p>
+                </div>
+
+                <div class="footer-social-btn" aria-label="Redes sociais">
+                    <a href="#" class="footer-social-btn" aria-label="Instagram">
+                        <img src="../assets/imagens/icons/instagram.svg" alt="" aria-hidden="true">
+                    </a>
+                    <a href="#" class="footer-social-btn" aria-label="Whatsapp">
+                        <img src="../assets/imagens/icons/whatsapp.svg" alt="" aria-hidden="true">
+                    </a>
+                    <a href="#" class="footer-social-btn" aria-label="Tiktok">
+                        <img src="../assets/imagens/icons/tiktok.svg" alt="" aria-hidden="true">
+                    </a>
+                </div>
+
+                <nav class="footer-col" aria-label="Links da loja">
+                    <h4>Loja</h4>
+                    <ul class="footer-links">
+                        <li><a href="produtos.html">Todos os produtos</a></li>
+                        <li><a href="produtos.html?tag=novo">Lançamentos</a></li>
+                        <li><a href="produtos.html?tag=sale">Promoções</a></li>
+                        <li><a href="produtos.html?tag=mais-vendido">Mais vendido</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-col" aria-label="Links de suporte">
+                    <h4>Suporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Trocas e devoluções</a></li>
+                        <li><a href="#">Rastrear pedido</a></li>
+                        <li><a href="#">Fale conosco</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-col" aria-label="Links institucionais">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 SyntaxWear. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
