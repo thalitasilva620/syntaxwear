@@ -307,6 +307,8 @@
     height: 20px;
     width: 20px;
     margin-top: 9px;
+    opacity: 0.4;
+    filter: invert(1);
 }
 
 .icon:hover {
