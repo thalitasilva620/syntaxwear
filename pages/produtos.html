@@ -7,6 +7,10 @@
     <meta name="description"
         content="SyntaxWear - Explore todos os nossos calçados. Filtre por categoria, tamanho, gênero e preço.">
 
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/produto.css">
+
     <title>Produtos - SyntaxWear</title>
 
 </head>
@@ -78,7 +82,7 @@
                         <div class="search-input-wrap">
                             <img src="../assets/imagens/icons/search.svg" aria-hidden="true" />
 
-                            <input type="search" id="busca-input" placeholder="Nome, marca ou categoria..."
+                            <input type="search" id="busca-input" placeholder="Nome, marca, categoria..."
                                 autocomplete="off" aria-label="Buscar produtos" />
                         </div>
                     </div>
@@ -197,13 +201,15 @@
                                 <input type="checkbox" name="tag" value="novo" />
                                 <span>🆕 Novo</span>
                             </label>
+
                             <label class="filter-chip">
                                 <input type="checkbox" name="tag" value="sale">
                                 <span>🔥 Promoção</span>
                             </label>
-                            <label>
-                                <input type="checkbox" name="tag" value="mais vendido" />
-                                <span>⭐ Mais vendido</span>
+
+                            <label class="filter-chip">
+                                <input type="checkbox" name="tag" value="mais-vendido" />
+                                <span>⭐Mais vendido</span>
                             </label>
                         </div>
                     </div>
@@ -315,12 +321,12 @@
                     </ul>
                 </nav>
             </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 SyntaxWear. Todos os direitos reservados</p>
-            </div>
         </div>
     </footer>
+
+    <div class="footer-bottom">
+        <p>© 2025 SyntaxWear. Todos os direitos reservados</p>
+    </div>
 </body>
 
 </html>
