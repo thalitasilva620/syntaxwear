@@ -86,6 +86,11 @@
     transition: var(--transition);
 }
 
+.header-icon-btn img {
+    opacity: 0.4;
+    filter: invert(1);
+}
+
 .header-icon-btn:hover {
     background: var(--clr-surface-2);
     color: var(--clr-text);
@@ -134,6 +139,11 @@
     margin-top: var(--space-md);
     max-width: 30ch;
     color: var(--clr-text);
+}
+
+.footer-brand .logo-footer img {
+  height: 32px;
+  width: auto;
 }
 
 .footer-col h4 {
