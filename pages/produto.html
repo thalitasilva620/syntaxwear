@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SyntaxWear - Detalhes do produto. Confira especificações, tamanhos disponíveis e adicione ao carrinho.">
+    <title>Produto - SyntaxWear</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" title="SyntaxWear - Tênis e Sneakers Online">
+                    <img src="../assets/imagens/logo/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online"
+                        class="logo" />
+                </a>
+
+                <nav class="nav" aria-label="Navegação principal">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="produtos.html" class="nav-link active">Produtos</a>
+                    <a href="../index.html#categorias" class="nav-link">Categorias</a>
+                    <a href="../index.html#newsletter" class="nav-link">Ofertas</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-icon-btn" aria-label="Buscar produtos" id="btn-search">
+                        <img src="../assets/imagens/icons/search.svg" alt="" aria-hidden="true" />
+                    </button>
+
+                    <a href="#" class="header-icon-btn" aria-label="Lista de desejos">
+                        <img src="../assets/imagens/icons/heart.svg" alt="" aria-hidden="true" />
+                    </a>
+
+                    <a href="carrinho.html" class="header-icon-btn" aria-label="Carrinho de compras">
+                        <img src="../assets/imagens/icons/cart.svg" alt="" aria-hidden="true" />
+                        <span class="cart-badge" aria-live="polite">0</span>
+                    </a>
+
+                    <a href="login.html" class="btn btn-outline">Entrar</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="produto-main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="../index.html" class="breadcrumb-link">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="produto.html" class="breadcrumb-link">Produtos</a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page" id="breadcrumb-produto">
+                        Carregando...
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <div class="container">
+            <article class="produto-section" aria-labelledby="produto-name">
+                <div class="produto-galeria">
+                    <figure class="produto-imagem-principal">
+                        <img src="" alt="" id="imagem-principal" class="produto-img" loading="eager" />
+
+                        <figcaption class="produto-badges" aria-label="Etiquetas do produto" id="produto-badges">
+                        </figcaption>
+                    </figure>
+
+                    <div class="produto-miniaturas" role="list" aria-label="Galeria de imagens do produto"
+                        id="produto-miniaturas"></div>
+                </div>
+
+                <div class="produto-detalhes">
+                    <div class="produto-meta">
+                        <span class="produto-categoria" id="produto-categoria"></span>
+                        <span class="produto-separador" aria-hidden="true">.</span>
+                        <span class="produto-marca" id="produto-marca"></span>
+                    </div>
+
+                    <h1 class="produto-nome" id="produto-nome"></h1>
+
+                    <div class="produto-avaliacao" aria-label="Avaliação do produto">
+                        <div class="produto-estrelas" id="produto-estrelas" aria-hidden="true"></div>
+                        <span class="produto-avaliacao-num" id="produto-avaliacao-num"></span>
+                        <span class="produto-avaliacao-total" id="produto-avaliacao-total"></span>
+                    </div>
+
+                    <div class="produto-preco" aria-label="Preço do produto">
+                        <span class="produto-preco-atual" id="produto-preco-atual"></span>
+                        <span class="produto-preco-original" id="produto-preco-original"></span>
+                        <span class="produto-desconto" id="produto-desconto"></span>
+                    </div>
+
+                    <div class="produto-cores">
+                        <span class="produto-opcao-label">
+                            Cor: <strong id="cor-selecionada"></strong>
+                        </span>
+                        <div class="produto-cores-lista" role="group" aria-label="Selecionar cor"
+                            id="produto-cores-lista"></div>
+                    </div>
+
+                    <div class="produto-tamanhos">
+                        <div class="produto-tamanho-header">
+                            <span class="produto-opcao-label">
+                                Tamanho: <strong id="tamanho-selecionado">Selecione</strong>
+                            </span>
+                            <a href="#guia-tamanhos" class="produto-guia-link">
+                                <img src="../assets/imagens/icons/" alt="" aria-hidden="true">
+
+                                Guia de tamanhos
+                            </a>
+                        </div>
+
+                        <div class="produto-tamanhos-lista" role="group" aria-label="Selecionar tamanho"
+                            id="produto-tamanhos-lista"></div>
+                    </div>
+
+                    <div class="produto-quantidade" aria-label="Quantidade">
+                        <span class="produto-opcao-label">Quantidade</span>
+                        <div class="quantidade-controle">
+                            <button class="quantidade-btn" id="btn-diminuir" aria-label="Diminuir quantidade">
+                                <img src="../assets/imagens/icons/minus.svg" alt="" aria-hidden="true">
+                            </button class="quantidade-btn" id="btn-diminuir" aria-label="Diminuir quantidade">
+                            <span class="quantidade-valor" id="quantidade-valor" aria-live="polite">1</span>
+
+                            <button class="quantidade-btn" id="btn-aumentar" aria-label="Aumentar quantidade">
+                                <img src="../assets/imagens/icons/plus.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto-acoes">
+                        <button class="btn btn-primary produto-btn-carrinho" id="btn-adicionar-carrinho"
+                            aria-label="Adicionar ao carrinho">
+                            <img src="../assets/imagens/icons/cart.svg" alt="" aria-hidden="true">
+                            Adicionar ao carrinho
+                        </button>
+                        <button class="btn btn-outline produto-btn-favorito" id="btn-favorito"
+                            aria-label="Adicionar aos favoritos" aria-pressed="false">
+                            <img src="../assets/imagens/icons/heart.svg" alt="" aria-hidden="true">
+                        </button>
+                    </div>
+
+                    <ul class="produto-beneficios" aria-label="Benefícios da compra">
+                        <li class="produto-beneficio">
+                            <img src="../assets/imagens/icons/package.svg" alt="" aria-hidden="true" />
+                            <span>Frete grátis acima de R$ 299</span>
+                        </li>
+                        <li class="produto-beneficio">
+                            <img src="../assets/imagens/icons/refresh.svg" alt="" aria-hidden="true" />
+                            <span>Troca grátis em até 30 dias</span>
+                        </li>
+                        <li class="produto-beneficio">
+                            <img src="../assets/imagens/icons/shield.svg" alt="" aria-hidden="true" />
+                            <span>Compra 100% segura</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <section class="produto-info" aria-label="descricao-titulo">
+                <h2 class="produto-info-titulo" id="descricao-titulo">Descrição do produto</h2>
+                <p class="produto-descricao" id="produto-descricao"></p>
+            </section>
+
+            <section class="produto-info-section" aria-labelledby="detalhes-titulo">
+                <h2 class="produto-info-titulo" id="detalhes-titulo">Detalhes técnicos</h2>
+                <dl class="produto-especificacoes" id="produto-especificacoes"></dl>
+            </section>
+
+            <section class="produto-info-section" id="guia-tamanhos" aria-labelledby="guia-titulo">
+                <h2 class="produto-info-titulo" id="guia-titulo">Guia de tamanhos</h2>
+                <div class="guia-tamanhos-wrap" role="region" aria-label="Tabela de medidas">
+                    <table class="guia-table">
+                        <caption class="sr-only">Guia de tamanhos - BR, EU e comprimento do pé em cm</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">BR</th>
+                                <th>EU</th>
+                                <th>Pé (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>35</td>
+                                <td>36</td>
+                                <td>22,5</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>37</td>
+                                <td>23,0</td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td>38</td>
+                                <td>23,5</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>39</td>
+                                <td>24,0</td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td>40</td>
+                                <td>25,0</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>41</td>
+                                <td>25,5</td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td>42</td>
+                                <td>26,0</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>43</td>
+                                <td>26,5</td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td>44</td>
+                                <td>27,5</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>45</td>
+                                <td>28,0</td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>46</td>
+                                <td>28,5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="produto-info-section" aria-labelledby="avaliacoes-titulo">
+                <h2 class="produto-info-titulo" id="avaliacoes-titulo">Avaliações dos clientes</h2>
+
+                <div class="avaliacoes-resumo">
+                    <div class="avaliacoes-nota">
+                        <span class="avaliacoes-nota-num" id="avaliacoes-nota-num"></span>
+                        <div class="avaliacoes-estrelas" id="avaliacoes-estrelas" aria-hidden="true"></div>
+                        <span class="avaliacoes-total" id="avaliacoes-total"></span>
+                    </div>
+                </div>
+
+                <ul class="avaliacoes-lista" id="avaliacoes-lista" aria-label="Lista de avaliações"></ul>
+            </section>
+
+            <section class="produto-info-section" aria-labelledby="relacionados-titulo">
+                <h2 class="produto-info-titulo" id="relacionados-titulo">Você também pode gostar</h2>
+                <div class="relacionado-grid" id="relacionado-grid" role="list" aria-label="Produtos relacionados">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" title="SyntaxWear - Tênis e Sneakers Online">
+                        <img src="../assets/imagens/logo/logo.svg" alt="SyntaxWear" class="logo-footer">
+                    </a>
+                    <p>Moda e tecnologia no mesmo par. Calçados com atitude para quem não fica parado.</p>
+                </div>
+
+                <div class="footer-social" aria-label="Redes sociais">
+                    <a href="#" class="footer-social-btn" aria-label="Instagram">
+                        <img src="../assets/imagens/icons/instagram.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a href="#" class="footer-social-btn" aria-label="WhatsApp">
+                        <img src="../assets/imagens/icons/whatsapp.svg" alt="" aria-hidden="true" />
+                    </a>
+                    <a href="#" class="footer-social-btn" aria-label="TikTok">
+                        <img src="../assets/imagens/icons/tiktok.svg" alt="" aria-hidden="true" />
+                    </a>
+                </div>
+
+                <nav class="footer-col" aria-label="Links da loja">
+                    <h4>Loja</h4>
+                    <ul class="footer-links">
+                        <li><a href="produtos.html">Todos os produtos</a></li>
+                        <li><a href="produtos.html?tag=novo">Lançamentos</a></li>
+                        <li><a href="produtos.html?tag=sale">Promoções</a></li>
+                        <li><a href="produtos.html?tag=mais-vendido">Mais vendidos</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-col" aria-label="Links de suporte">
+                    <h4>Suporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Trocas e devoluções</a></li>
+                        <li><a href="#">Rastrear pedido</a></li>
+                        <li><a href="#">Fale conosco</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-col" aria-label="Links institucionais">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 SyntaxWear. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
