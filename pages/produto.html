@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="SyntaxWear - Detalhes do produto. Confira especificações, tamanhos disponíveis e adicione ao carrinho.">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/produto.css">
     <title>Produto - SyntaxWear</title>
 </head>
 
@@ -73,13 +77,14 @@
                     </figure>
 
                     <div class="produto-miniaturas" role="list" aria-label="Galeria de imagens do produto"
-                        id="produto-miniaturas"></div>
+                        id="produto-miniaturas">
+                    </div>
                 </div>
 
                 <div class="produto-detalhes">
                     <div class="produto-meta">
                         <span class="produto-categoria" id="produto-categoria"></span>
-                        <span class="produto-separador" aria-hidden="true">.</span>
+                        <span class="produto-separador" aria-hidden="true">/</span>
                         <span class="produto-marca" id="produto-marca"></span>
                     </div>
 
@@ -98,11 +103,14 @@
                     </div>
 
                     <div class="produto-cores">
+                        
+                        <div class="produto-cores-lista" role="group" aria-label="Selecionar cor"
+                            id="produto-cores-lista">
+                        </div>
+
                         <span class="produto-opcao-label">
                             Cor: <strong id="cor-selecionada"></strong>
                         </span>
-                        <div class="produto-cores-lista" role="group" aria-label="Selecionar cor"
-                            id="produto-cores-lista"></div>
                     </div>
 
                     <div class="produto-tamanhos">
@@ -111,14 +119,15 @@
                                 Tamanho: <strong id="tamanho-selecionado">Selecione</strong>
                             </span>
                             <a href="#guia-tamanhos" class="produto-guia-link">
-                                <img src="../assets/imagens/icons/" alt="" aria-hidden="true">
+                                <img src="../assets/imagens/icons/ruler.svg" alt="" aria-hidden="true">
 
                                 Guia de tamanhos
                             </a>
                         </div>
 
                         <div class="produto-tamanhos-lista" role="group" aria-label="Selecionar tamanho"
-                            id="produto-tamanhos-lista"></div>
+                            id="produto-tamanhos-lista">
+                        </div>
                     </div>
 
                     <div class="produto-quantidade" aria-label="Quantidade">
@@ -321,12 +330,12 @@
                     </ul>
                 </nav>
             </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 SyntaxWear. Todos os direitos reservados.</p>
-            </div>
         </div>
     </footer>
+
+    <div class="footer-bottom">
+        <p>© 2025 SyntaxWear. Todos os direitos reservados.</p>
+    </div>
 </body>
 
 </html>
